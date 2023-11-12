@@ -4,7 +4,9 @@ def LangList(ArgLead: string, CmdLine: string, CursorPos: number): list<string>
 
 	var lang_list = [ 
 			\ "C/C++", 
+			\ "C/C++ remote", 
 			\ "C#", 
+			\ "Docker",
 			\ "Go", 
 			\ "Jai", 
 			\ "Javascript/Typescript", 
@@ -12,6 +14,7 @@ def LangList(ArgLead: string, CmdLine: string, CursorPos: number): list<string>
 			\ "Lua", 
 			\ "PHP", 
 			\ "Python", 
+			\ "Python remote", 
 			\ "Rust" 
 			\ ]
 
@@ -28,10 +31,22 @@ def CreateConfig(lang: string)
 		put =readfile(template_path .. "c.template")
 	endif
 
+	if lang == "C/C++ remote"
+		vert new
+		setfiletype jsonc
+		put =readfile(template_path .. "c-remote.template")
+	endif
+
 	if lang == "C#"
 		vert new
 		setfiletype jsonc
 		put =readfile(template_path .. "csharp.template")
+	endif
+
+	if lang == "Docker"
+		vert new
+		setfiletype jsonc
+		put =readfile(template_path .. "docker.template")
 	endif
 
 	if lang == "Go"
@@ -76,25 +91,17 @@ def CreateConfig(lang: string)
 		put =readfile(template_path .. "python.template")
 	endif
 
+	if lang == "Python remote"
+		vert new
+		setfiletype jsonc
+		put =readfile(template_path .. "python-remote.template")
+	endif
+
 	if lang == "Rust"
 		vert new
 		setfiletype jsonc
 		put =readfile(template_path .. "rust.template")
 	endif
-enddef
-
-def NewSplit(mods: string, path: string)
-
-	const ptybuf: number = term_start(['glow', file], {
-		norestore: true,
-		term_name: $'glow {file}',
-		hidden: true,
-		term_cols: 1000,
-		term_finish: 'open',
-		term_opencmd: $'{mods} sbuffer %d'
-		})
-
-	setbufvar(ptybuf, '&bufhidden', 'wipe')
 enddef
 
 command -nargs=1 -complete=customlist,LangList VimspectorCreateConfig CreateConfig(<q-args>)

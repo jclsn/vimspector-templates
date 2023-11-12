@@ -2,24 +2,24 @@
   "configurations": {
     "Launch": {
       "adapter": "vscode-cpptools",
-      "filetypes": [ "cpp", "c", "objc", "rust" ],	// optional
+      "filetypes": [ "cpp", "c", "objc", "rust" ],	
       "configuration": {
         "request": "launch",
-        "program": "<path to binary>",			// Usually ./main or ./a.out
-        "args": [ ... ],				// Remove dots if no arguments needed	
-        "cwd": "<working directory>",			// Usually ${workspaeRoot}
-        "environment": [ ... ],				// Remove dots if no environment vars are needed
+        "program": "<path to binary>",			
+        "args": [],				
+        "cwd": "${workspaceRoot}",			
+        "environment": [],				
         "externalConsole": true,
-        "MIMode": "<lldb or gdb>"			// Usually gdb
+        "MIMode": "<lldb or gdb>"			
       }
     },
     "Attach": {
       "adapter": "vscode-cpptools",
-      "filetypes": [ "cpp", "c", "objc", "rust" ],	// optional
+      "filetypes": [ "cpp", "c", "objc", "rust" ],
       "configuration": {
         "request": "attach",
-        "program": "<path to binary>",			// Usually ./main or ./a.out
-        "MIMode": "<lldb or gdb>"			// Usually gdb
+        "program": "<path to binary>",
+        "MIMode": "<lldb or gdb>"
       }
     }
   }
