@@ -15,6 +15,5 @@
         "program": "<path to main python file>"
       }
     }
-    ...
   }
 }

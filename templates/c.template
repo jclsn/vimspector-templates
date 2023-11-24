@@ -2,15 +2,15 @@
   "configurations": {
     "Launch": {
       "adapter": "vscode-cpptools",
-      "filetypes": [ "cpp", "c", "objc", "rust" ],	
+      "filetypes": [ "cpp", "c", "objc", "rust" ],
       "configuration": {
         "request": "launch",
-        "program": "<path to binary>",			
-        "args": [],				
-        "cwd": "${workspaceRoot}",			
-        "environment": [],				
+        "program": "<path to binary>",
+        "args": [],
+        "cwd": "${workspaceRoot}",
+        "environment": [],
         "externalConsole": true,
-        "MIMode": "<lldb or gdb>"			
+        "MIMode": "<lldb or gdb>"
       }
     },
     "Attach": {
