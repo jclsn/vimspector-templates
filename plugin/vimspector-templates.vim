@@ -30,81 +30,68 @@ def CreateConfig(lang: string)
 		vert new
 		setfiletype jsonc
 		put =readfile(template_path .. "bash.template")
-	endif
 
-	if lang == "C/C++"
+	elseif lang == "C/C++"
 		vert new
 		setfiletype jsonc
 		put =readfile(template_path .. "c.template")
-	endif
 
-	if lang == "C/C++ remote"
+	elseif lang == "C/C++ remote"
 		vert new
 		setfiletype jsonc
 		put =readfile(template_path .. "c-remote.template")
-	endif
 
-	if lang == "C#"
+	elseif lang == "C#"
 		vert new
 		setfiletype jsonc
 		put =readfile(template_path .. "csharp.template")
-	endif
 
-	if lang == "Docker"
+	elseif lang == "Docker"
 		vert new
 		setfiletype jsonc
 		put =readfile(template_path .. "docker.template")
-	endif
 
-	if lang == "Go"
+	elseif lang == "Go"
 		vert new
 		setfiletype jsonc
 		put =readfile(template_path .. "go.template")
-	endif
 
-	if lang == "Jai"
+	elseif lang == "Jai"
 		vert new
 		setfiletype jsonc
 		put =readfile(template_path .. "jai.template")
-	endif
 
-	if lang == "Javascript/Typescript"
+	elseif lang == "Javascript/Typescript"
 		vert new
 		setfiletype jsonc
 		put =readfile(template_path .. "javascript.template")
-	endif
 
-	if lang == "Java"
+	elseif lang == "Java"
 		vert new
 		setfiletype jsonc
 		put =readfile(template_path .. "java.template")
-	endif
 
-	if lang == "Lua"
+	elseif lang == "Lua"
 		vert new
 		setfiletype jsonc
 		put =readfile(template_path .. "lua.template")
-	endif
 
-	if lang == "PHP"
+	elseif lang == "PHP"
 		vert new
 		setfiletype jsonc
 		put =readfile(template_path .. "php.template")
-	endif
 
-	if lang == "Python"
+	elseif lang == "Python"
 		vert new
 		setfiletype jsonc
 		put =readfile(template_path .. "python.template")
-	endif
 
-	if lang == "Python remote"
+	elseif lang == "Python remote"
 		vert new
 		setfiletype jsonc
 		put =readfile(template_path .. "python-remote.template")
-	endif
 
-	if lang == "Rust"
+	elseif lang == "Rust"
 		vert new
 		setfiletype jsonc
 		put =readfile(template_path .. "rust.template")
