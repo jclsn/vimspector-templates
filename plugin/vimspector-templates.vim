@@ -3,6 +3,7 @@ vim9script
 def LangList(ArgLead: string, CmdLine: string, CursorPos: number): list<string>
 
 	var lang_list = [ 
+			\ "Bash", 
 			\ "C/C++", 
 			\ "C/C++ remote", 
 			\ "C#", 
@@ -24,6 +25,12 @@ enddef
 def CreateConfig(lang: string)
 
 	const template_path: string = expand('<script>>:p:h')[ : -32] .. "templates/"
+
+	if lang == "Bash"
+		vert new
+		setfiletype jsonc
+		put =readfile(template_path .. "bash.template")
+	endif
 
 	if lang == "C/C++"
 		vert new
