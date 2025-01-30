@@ -1,7 +1,7 @@
 {
   "configurations": {
     "Launch": {
-      "adapter": "vscode-cpptools",
+      "adapter": "<vscode-cpptools or CodeLLDB>",
       "filetypes": [ "cpp", "c", "objc", "rust" ],
       "configuration": {
         "request": "launch",
@@ -14,7 +14,7 @@
       }
     },
     "Attach": {
-      "adapter": "vscode-cpptools",
+      "adapter": "<vscode-cpptools or CodeLLDB>",
       "filetypes": [ "cpp", "c", "objc", "rust" ],
       "configuration": {
         "request": "attach",
